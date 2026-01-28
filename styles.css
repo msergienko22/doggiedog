@@ -96,7 +96,7 @@ body {
   width: 60px;
   height: 60px;
   border-radius: 24px;
-  background: radial-gradient(circle at 30% 30%, #ff8fb0, #ff8a5b 45%, #7f8bff 100%);
+  background: #ff8fb0;
   clip-path: path(
     "M30 54 C10 40 2 30 2 18 C2 9 9 2 18 2 C24 2 29 5 30 11 C31 5 36 2 42 2 C51 2 58 9 58 18 C58 30 50 40 30 54 Z"
   );
@@ -131,7 +131,7 @@ body {
 }
 
 .heart.is-shaking {
-  animation: shake 0.28s ease-in-out;
+  animation: none;
 }
 
 @keyframes shake {
