@@ -4,14 +4,14 @@
   padding: 0;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap");
 
 :root {
   color-scheme: light;
   --bg: #fbf7f4;
   --title: #4a3f45;
-  --shadow: 0 6px 16px rgba(221, 127, 153, 0.35);
-  --glow: 0 0 14px rgba(255, 142, 168, 0.35);
+  --shadow: 0 4px 10px rgba(221, 127, 153, 0.25);
+  --glow: 0 0 10px rgba(255, 142, 168, 0.22);
   --modal-bg: rgba(255, 248, 245, 0.92);
 }
 
@@ -35,7 +35,7 @@ body {
   transform: translateX(-50%);
   width: 100%;
   text-align: center;
-  font-family: "Baloo 2", "Comic Sans MS", "Trebuchet MS", cursive;
+  font-family: "Nunito", "Trebuchet MS", "Segoe UI", sans-serif;
   font-size: clamp(2rem, 3vw, 3.3rem);
   letter-spacing: 0.03em;
   z-index: 9;
@@ -85,7 +85,10 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.25));
+  display: block;
+  background: transparent;
+  clip-path: inset(3% round 18px);
+  mix-blend-mode: multiply;
 }
 
 .heart {
@@ -128,7 +131,7 @@ body {
 }
 
 .heart.is-shaking {
-  animation: shake 0.4s ease-in-out;
+  animation: shake 0.28s ease-in-out;
 }
 
 @keyframes shake {
@@ -136,16 +139,16 @@ body {
     transform: translate3d(0, 0, 0) rotate(var(--rotation));
   }
   20% {
-    transform: translate3d(-2px, 1px, 0) rotate(calc(var(--rotation) - 6deg));
+    transform: translate3d(-1px, 0.5px, 0) rotate(calc(var(--rotation) - 3deg));
   }
   40% {
-    transform: translate3d(2px, -1px, 0) rotate(calc(var(--rotation) + 6deg));
+    transform: translate3d(1px, -0.5px, 0) rotate(calc(var(--rotation) + 3deg));
   }
   60% {
-    transform: translate3d(-1px, 2px, 0) rotate(calc(var(--rotation) - 4deg));
+    transform: translate3d(-0.5px, 1px, 0) rotate(calc(var(--rotation) - 2deg));
   }
   80% {
-    transform: translate3d(1px, -2px, 0) rotate(calc(var(--rotation) + 4deg));
+    transform: translate3d(0.5px, -1px, 0) rotate(calc(var(--rotation) + 2deg));
   }
   100% {
     transform: translate3d(0, 0, 0) rotate(var(--rotation));
